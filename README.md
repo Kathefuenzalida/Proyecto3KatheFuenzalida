@@ -31,3 +31,7 @@ El proyecto está compuesto principalmente por:
 
 1. Clonar el repositorio en bash o similares
    git clone https://github.com/kathefuenzalida/Proyecto3KatheFuenzalida.git
+
+   Autora
+Katherine Fuenzalida Rojas
+Ingeniera Civil Industrial | Fullstack Developer en formación
