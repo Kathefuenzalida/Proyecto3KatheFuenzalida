@@ -13,8 +13,11 @@
     <img src="img/icono.png" alt="Logotipo de la tienda Our Fire">
  <h1>Bienvenidos a Our Fire</h1>
  <p>Fabricamos fogones de metal resistentes y elegantes para acompañarte en tus momentos al aire libre.</p>
-   <nav>
-  <ul>
+<nav>
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+  <ul id="menu">
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Modelos</a></li>
     <li><a href="#">Accesorios</a></li>
@@ -63,6 +66,13 @@
   <footer>
     <p>&copy; 2025 Our Fire. Todos los derechos reservados.</p>
   </footer>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
