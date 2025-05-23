@@ -148,3 +148,34 @@ section {
     font-size: 16px;
   }
 }
+.hero {
+  background-image: url('img/hero.jpg'); /* Asegúrate de que la imagen esté en la carpeta "img" y renombrada así */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece para que el texto se lea mejor */
+  color: white;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+.hero-overlay h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
