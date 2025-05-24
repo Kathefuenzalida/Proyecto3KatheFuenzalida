@@ -179,3 +179,21 @@ section {
   font-size: 1.5rem;
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding: 20px 10px;
+  }
+
+  .hero-overlay {
+    padding: 20px 10px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
