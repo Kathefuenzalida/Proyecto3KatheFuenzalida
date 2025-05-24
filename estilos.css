@@ -149,7 +149,7 @@ section {
   }
 }
 .hero {
-  background-image: url('img/hero.jpg'); /* Asegúrate de que la imagen esté en la carpeta "img" y renombrada así */
+  background-image: url('img/hero.png'); /* Asegúrate de que la imagen esté en la carpeta "img" y renombrada así */
   background-size: cover;
   background-position: center;
   height: 80vh;
