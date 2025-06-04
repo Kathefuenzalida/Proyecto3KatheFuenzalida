@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //crear arreglo
+        const misfrutas = ["manzana", "platano", "uvas", "peras", "naranjas", "kiwi", "melon", "sandia","granada", "arandano"]
+        misfrutas.forEach((frutas, indice) => {    
+        //document.write(indice + frutas + "<br>")
+        return
+        setTimeout(() => {
+        document.write((indice + 1) +" " + frutas + "<br>")
+    }, indice * 1000)
+    } )
+
+    </script>
+</body>
+</html>

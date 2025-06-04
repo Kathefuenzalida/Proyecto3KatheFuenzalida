@@ -1,0 +1,20 @@
+const usuarios = [
+  { nombre: 'Ana', edad: 28 },
+  { nombre: 'Carlos', edad: 32 },
+  { nombre: 'Luis', edad: 25 },
+];
+
+//console.log(suma.length); // 2
+
+//Función de flecha para obtener un arreglo de nombres de usuarios mayores de 30 años
+const mayoresDe30 = usuarios
+  .filter(usuario => usuario.edad > 30)
+  .map(usuario => usuario.nombre);
+
+console.log(mayoresDe30); // ['Carlos']
+/* Se define un arreglo de objetos de usuarios que contienen propiedades nombre y edad.
+Se utiliza el método filter para crear un nuevo arreglo que contiene solo los objetos de usuario cuya propiedad edad es mayor a 30.
+La función de flecha se pasa como argumento a filter, y toma un único parámetro usuario.
+La función devuelve true si la propiedad edad del objeto usuario es mayor a 30, de lo contrario, devuelve false. - Luego, se utiliza el método map para transformar el arreglo filtrado en un nuevo arreglo que contiene solo los nombres de los usuarios mayores de 30 años.
+La función de flecha se pasa como argumento a map, y toma un único parámetro usuario. La función devuelve la propiedad nombre del objeto usuario.
+Finalmente, se imprime el arreglo mayoresDe30 en la consola, que es ['Carlos'].*/

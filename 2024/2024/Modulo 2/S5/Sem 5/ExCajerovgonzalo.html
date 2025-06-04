@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let saldo = 1000;
+ 
+ function mostrarMenu() {
+     console.log("Bienvenido al cajero automático");
+     console.log("1. Consultar saldo");
+     console.log("2. Retirar dinero");
+     console.log("3. Depositar dinero");
+     console.log("4. Salir");
+     const opcion = parseInt(prompt("Seleccione una opción"));
+     return opcion;
+ }
+ //funcion para consultar el saldo
+  
+ function consultarSaldo() {
+     console.log(`Su saldo es de $${saldo}`);
+ }
+  
+ //funcion para retirar dinero
+ function retirarDinero(){
+     const cantidad = parseInt(prompt("¿Cuánto dinero desea retirar?"));
+     if(cantidad > 0){
+         if (cantidad <= saldo){
+             saldo -= cantidad;
+             console.log(`Retire su dinero: $${cantidad}. Su nuevo salgo es: $${saldo}`);
+         }
+         else{
+             console.log("Fondos insuficientes");
+         }
+     }else{
+             console.log("Cantidad inválida");
+     }
+ }
+  
+ //funcion para depositar dinero
+
+    </script>
+
+</body>
+</html>

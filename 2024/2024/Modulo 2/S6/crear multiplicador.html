@@ -1,0 +1,13 @@
+function crearMultiplicador(factor) {
+    return function (numero) {
+      return numero * factor;
+    };
+  }
+  
+  const doble = crearMultiplicador(2);
+  const triple = crearMultiplicador(3);
+  
+  console.log(doble(5)); // 10
+  console.log(triple(5)); // 15
+
+  En este ejemplo, se define una función crearMultiplicador que toma un único argumento factor. La función retorna una nueva función que multiplica su argumento numero por el factor proporcionado. Luego, se crean dos nuevas funciones, doble y triple, utilizando crearMultiplicador con los factores 2 y 3, respectivamente. Estas nuevas funciones se pueden utilizar para multiplicar números por 2 y 3.

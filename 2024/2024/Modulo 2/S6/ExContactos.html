@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+  let contactos = [
+  {
+    nombre: 'Juan',
+    telefono: '123456789'
+  },
+  {
+    nombre: 'Pedro',
+    telefono: '987654321'
+  },
+  {
+    nombre: 'Maria',
+    telefono: '456789123'
+  },
+  {
+    nombre: 'Ana',
+    telefono: '654321987'
+  }
+];
+
+// agregar - eliminar - buscar - mostrar
+function agregarContacto(nombre, telefono){ //función para agregar un contacto
+  //creamos un objeto con los datos del contacto
+  const contacto = {
+    nombre: nombre,
+    telefono: telefono
+  }
+  //lo agregamos al arreglo con el método push ... push agrega un elemento al final del arreglo
+  contactos.push(contacto);
+}
+
+//TODO: la hacemos luego
+const eliminarContacto = (nombre) => {
+  //ocupar filter para eliminar un contacto, vamos a retornar un nuevo arreglo con los elementos que no coincidan con el nombre
+  contactos = contactos.filter((contacto) => {
+    return contacto.nombre !== nombre;
+  });
+}
+
+const buscarContacto = (nombre) => {
+  //ocupar find para buscar un contacto, find retorna el primer elemento que cumpla con la condición
+  const contactoEncontrado = contactos.find((contacto) => { //función callback
+    return contacto.nombre === nombre;
+  });
+
+  return contactoEncontrado;
+}
+
+const mostrarContactos = () => {
+  //recorrer el arreglo de contactos y mostrarlos en consola
+  console.log('Contactos:');
+  console.log(contactos);
+}
+
+
+agregarContacto('Carlos', '123456789');
+
+mostrarContactos();
+
+eliminarContacto('Pedro');
+
+mostrarContactos();
+
+const contactoBuscado = buscarContacto('Maria');
+
+console.log('Contacto buscado:', contactoBuscado);
+
+    </script>
+</body>
+</html>

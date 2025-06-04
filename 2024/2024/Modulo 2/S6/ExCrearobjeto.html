@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+let nombreUser = String(prompt("Ingresa tu nombre"))
+while (!nombreUser || nombreUser === "" || nombreUser.trim()==="") {
+    nombreUser = String(prompt("Escribe tu nombre"))
+}
+
+let apellidoUser = String(prompt("Ingresa tu apellido"))
+while (!apellidoUser || apellidoUser === "" || apellidoUser.trim()==="") {
+    apellidoUser = String(prompt("Escribe tu apellido"))
+}
+
+let emailUser = String(prompt("Ingresa tu mail"))
+while (!emailUser || emailUser === "" || emailUser.trim()==="") {
+    emailUser = String(prompt("Escribe tu email"))
+}
+
+let workUser = String(prompt("Ingresa tu ocupación"))
+while (!workUser || workUser === "" || workUser.trim()==="") {
+    workUser = String(prompt("Escribe tu ocupación"))
+}
+
+let edadUser = String(prompt("Ingresa tu edad"))
+while (!edadUser || edadUser === "" || edadUser.trim()==="") {
+    edadUser = String(prompt("Escribe tu edad"))
+}
+
+const objetoUser = (nombre, apellido, email, ocupacion, edad) =>{
+let usuario = {
+    nombre: nombre,
+    apellido: apellido,
+    email: email,
+    ocupacion: ocupacion,
+    edad: edad
+}
+return usuario
+}
+let usuario = objetoUser(nombreUser, apellidoUser, emailUser, workUser, edadUser)
+
+document.write(
+    "<h1>Usuario </h1>",
+"<p>Nombre: </p>", usuario.nombre , "<br/>", 
+"<p>Apellido: </p>", usuario.apellido , "<br/>", 
+"<p>Correo: </p>", usuario.email , "<br/>", 
+"<p>Ocupación: </p>", usuario.ocupación , "<br/>", 
+"<p>Edad: </p>", usuario.edad , "<br/>"), 
+
+console.log ("El Usuario es: ", usuario)
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+    <script>
+let catalogo = [];
+//DECLARATIVA
+function agregarProducto(nombre) {
+  catalogo.push({ nombre: nombre, completada: false });
+  console.log(`Producto "${nombre}" agregado.`);
+}
+//otra forma para eliminar product
+const eliminarProducto = (nombre) => {
+  //ocupar filter para eliminar un contacto, vamos a retornar un nuevo arreglo con los elementos que no coincidan con el nombre
+   catalogo=catalogo.filter((producto) => {
+    return producto.nombre !== nombre;
+  });
+}
+
+
+//EXPRESIÓN
+/*const eliminarProducto = function(nombre) {
+  const index = catalogo.findIndex(producto => producto.nombre === nombre); 
+  if (index !== -1) { 
+    catalogo.splice(index, 1); 
+    console.log(`producto "${nombre}" eliminado.`); 
+  } else {
+    console.log(`producto "${nombre}" no encontrada.`);
+  }
+};*/
+//ANÓNIMA
+const buscarProducto = function(nombre) { 
+  return catalogo.find(function(producto) { 
+    return producto.nombre === nombre;
+  });
+};
+//FLECHA
+const mostrarProducto = () => { 
+  console.log("Catálogo:");
+  catalogo.forEach(producto => console.log(`- ${producto.nombre}`)); 
+};
+
+// Ejemplo de uso
+agregarProducto("Gomero");
+agregarProducto("Lilium");
+agregarProducto("Liquidambar");
+agregarProducto("Pino azul");
+agregarProducto("Camelia");
+agregarProducto("Margaritas");
+eliminarProducto("Camelia");
+console.log(buscarProducto("Pino azul"))
+mostrarProducto()
+
+    </script>

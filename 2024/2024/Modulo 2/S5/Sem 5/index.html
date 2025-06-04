@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>hola mundo</h1>
+<script>
+    console.log ("este es mi primer programa")
+    console.warn ("esto significa peligro")
+    console.error ("aqui ocurrió un error")
+    console.info ("info importante")
+    // Console.table, console.info, 
+    //alert("Soy una alerta dejavascript")
+    //Definir variables
+    let operador = prompt(" Ingresa el operador +, -, *, /")
+    let numero1 = Number(prompt(" Ingresa el numero 1"))
+    while (isNaN(numero1)){
+    console.log("Número 1 no válido")
+    numero1 = Number(prompt(" el dato 1 debe ser numero"))
+    }
+
+    let numero2 = Number(prompt(" Ingresa el numero 2"))
+    while (isNaN(numero2)){
+        console.log("Número 2 no válido")
+        numero2 = Number(prompt(" el dato 2 debe ser numero"))
+    }
+    let resultado = 0
+    //()
+    //const datorecibido = Number(prompt(" Ingresa un mensaje aquí"))
+    //console.log(datorecibido)
+
+    console.log(operador)
+    console.log(numero1)
+    console.log(numero2)
+    
+    if(operador === "+"){
+        resultado = numero1 + numero2  
+    } else if (operador === "-"){
+        resultado=numero1 - numero2
+    } else if (operador === "*"){
+        resultado=numero1 * numero2
+    } else if (operador === "/"){
+        resultado=numero1 / numero2
+    }else   {
+        console.error("el operador no es valido")
+        resultado = null
+        }
+    console.log(resultado)
+    document.write("resultado de la operacion: ")
+    document.write(resultado)
+    //NaN = not a number
+    
+    
+</script>
+</body>|
+</html>

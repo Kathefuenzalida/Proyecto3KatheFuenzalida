@@ -1,0 +1,36 @@
+</head>
+<body>
+    <script>
+const bajopeso = 18.5
+const normal = 25
+const sobrepeso = 30
+    let peso = Number(prompt(" Ingresa tu peso en kg"))
+    while (isNaN(peso)){
+        console.log("peso no válido")
+        peso = Number(prompt(" el dato peso debe ser numero"))
+    }
+
+    let estatura = Number(prompt(" Ingresa tu estatura en metros"))
+    while (isNaN(estatura)){
+        console.log("estatura no válida")
+        estatura = Number(prompt(" el dato estatura debe ser numero"))
+    }
+// const
+let IMC = peso / (estatura * estatura)
+document.write(" IMC: ", IMC.toFixed(1))
+document.write("<br>")
+document.write("<br>")
+if(IMC <= bajopeso){
+	document.write(" Clasificación es bajo peso") 
+    }else if (IMC >= bajopeso & IMC <=normal){
+        document.write(" Clasificación es normal")
+    }else if (IMC > normal & IMC < sobrepeso){
+        document.write(" Clasificación es Sobrepeso")
+    }
+	else if (IMC >= sobrepeso){
+        document.write(" Clasificación es Obesidad")
+    }
+
+    </script>
+</body>
+</html>

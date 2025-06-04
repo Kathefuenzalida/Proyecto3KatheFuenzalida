@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carrusel Superior</title>
+</head>
+<body>
+    <div class="carrusel">
+        <div class="slides">
+            <div class="slide active">
+                <img src="imagen1.jpg" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img src="imagen2.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
+        <button class="next" onclick="cambiarSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

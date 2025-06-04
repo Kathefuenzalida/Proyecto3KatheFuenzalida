@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let tareas = []; // 1. Declaramos un arreglo vacío llamado `tareas` donde almacenaremos las tareas.
+
+function agregarTarea(nombre) { // 2. Función de declaración para agregar una tarea.
+  tareas.push({ nombre: nombre, completada: false }); // 3. Agregar un objeto con propiedades `nombre` y `completada` al arreglo `tareas`.
+  console.log(`Tarea "${nombre}" agregada.`); // 4. Imprimir mensaje indicando que la tarea ha sido agregada.
+}
+
+const eliminarTarea = function(nombre) { // 5. Función de expresión para eliminar una tarea.
+  const index = tareas.findIndex(tarea => tarea.nombre === nombre); // 6. Buscar el índice de la tarea con el nombre igual al parámetro `nombre`.
+  if (index !== -1) { // 7. Verificar si la tarea fue encontrada.
+    tareas.splice(index, 1); // 8. Eliminar la tarea en el índice encontrado.
+    console.log(`Tarea "${nombre}" eliminada.`); // 9. Imprimir mensaje indicando que la tarea ha sido eliminada.
+  } else {
+    console.log(`Tarea "${nombre}" no encontrada.`); // 10. Imprimir mensaje indicando que no se encontró la tarea.
+  }
+};
+
+const buscarTarea = function(nombre) { // 11. Función de expresión para buscar tareas por su nombre.
+  return tareas.find(function(tarea) { // 12. Buscar y devolver la tarea con el nombre igual al parámetro `nombre`.
+    return tarea.nombre === nombre; // 13. Comparar el nombre de la tarea actual con el parámetro `nombre`.
+  });
+};
+
+const mostrarTareas = () => { // 14. Función de flecha para mostrar todas las tareas.
+  console.log("Tareas:");
+  tareas.forEach(tarea => console.log(`- ${tarea.nombre}`)); // 15. Iterar sobre las tareas e imprimir su nombre.
+};
+
+// Ejemplo de uso
+agregarTarea("Aprender JavaScript");
+agregarTarea("Hacer la compra");
+agregarTarea("Cocinar");
+agregarTarea("Caminar");
+eliminarTarea("Hacer la compra");
+console.log(buscarTarea("Aprender JavaScript"));
+mostrarTareas();
+
+    </script>
+</body>
+</html>

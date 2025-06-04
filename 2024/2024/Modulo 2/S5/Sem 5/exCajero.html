@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let saldo = 10000000 
+let indice = 1
+let retiro = 0
+let deposito = 0
+
+setTimeout(() => { },60000)  
+
+let action = Number (prompt("BIENVENIDO/A TOP BANK \n\n Qué deseas hacer hoy? \n\n 1 Consultar saldo \n 2 Retirar dinero \n 3 Depositar dinero \n 4 Salir \n \n" ))
+
+while (action < 1 || action > 4) { 
+    document.write("<br>")
+    document.write("Acción no valida")
+    document.write("<br>")
+    action = Number(prompt(" el dato debe ser numero del 1 al 4"))
+}
+        
+if (action === 1){
+    document.write("<br>" + "<br>")
+    document.write ("Tú saldo actual es: $ " + saldo.toLocaleString() + "<br>")
+    document.write ("\n\n TopBank")}
+
+if (action === 2){ 
+    let retiro = Number(prompt("¿Cuánto deseas retirar?"))
+        if (retiro <= saldo ){
+            document.write ("<br>" + "Retire su dinero" + "<br>")
+            saldo = saldo - retiro
+            document.write ("Su nuevo saldo es: $ " + saldo.toLocaleString() + "<br>")}
+
+        else if (retiro > saldo ){
+            document.write ("<br>" + "Saldo insufuciente" + "<br>")
+            let retiro = number(prompt("<br>" + "Por favor ingrese el monto a retirar nuevamente"))
+                 if (retiro <= saldo ){
+                    document.write ("<br>" + "Retire su dinero" + "<br>")
+                    saldo = saldo - retiro
+                    document.write ("Su nuevo saldo es: $ " + saldo.toLocaleString() + "<br>")}
+                    document.write ("\n TopBank")}}
+            
+
+if (action === 3){ 
+    let deposito = Number(prompt("¿Cuánto deseas depositar?"));
+        if (deposito > 0 ){
+            document.write ("<br>" + "Depósito exitoso" + "<br>")
+            saldo = saldo + deposito
+            document.write ("Su nuevo saldo es: $ " + saldo.toLocaleString() + "<br>")}}
+
+if (action === 4){ 
+    document.write ("\n TopBank")}
+    </script>
+</body>
+</html>
