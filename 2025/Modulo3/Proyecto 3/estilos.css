@@ -197,3 +197,81 @@ section {
     font-size: 1rem;
   }
 }
+
+.recomendaciones {
+  background-color: #fff8f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  border: 1px solid #d8c3a5;
+}
+
+.recomendaciones h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #5e412f;
+  font-family: 'Georgia', serif;
+}
+
+.recomendaciones ul {
+  list-style: disc;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+/* Animación para fogón portátil */
+.fogon-portatil {
+  animation: resaltar 1.5s infinite alternate;
+  border: 2px solid #a9745f;
+  box-shadow: 0 0 15px rgba(169, 116, 95, 0.4);
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff4eb;
+}
+
+@keyframes resaltar {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.destacado {
+  background-color: #fcebd5;
+  color: #8a5a44;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-family: 'Georgia', serif;
+  margin-top: 0.5rem;
+}
+.footer-redes {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-redes .redes-sociales {
+  margin-top: 0.5rem;
+}
+
+.footer-redes .redes-sociales a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes .redes-sociales a:hover {
+  transform: scale(1.2);
+}
+
+.footer-redes .redes-sociales img {
+  width: 24px;
+  height: 24px;
+}
